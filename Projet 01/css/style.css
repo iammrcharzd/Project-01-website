@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+/* Navigation starts here */
+.navbar{
+    background-color: var(--primary-color);
+    height: 70px;
+}
+.navbar a{
+    color: #fff;
+}
+.navbar .container{
+    height: 100%;
+}
+.nav_menu a{
+    padding: 10px;
+    margin: 0 5px; 
+}
+.nav_menu a:hover{
+    border-bottom: 2px solid #fff; 
+}
+/* Navigation ends here */
+
+
+/* Showcase Starts here */
+.showcase{
+    position: relative;
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 400px;
+}
+.showcase_text{
+    animation: slideInFromLeft .85s ease-in;
+}
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+.showcase .grid{
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+.showcase_form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    animation: slideInFromRight .85s ease-in;
+}
+.showcase_form .form_group{
+    margin: 30px 0;
+}
+.showcase .form_control{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 5px 3px;
+    font-size: 16px;
+}
+.showcase .form_control:focus{
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+.showcase::before,
+.showcase::after{
+    position: absolute;
+    content: "";
+    height: 100px;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+/* Showcase Ends here */
+
+
+/* Stats starts here */
+.stats{
+    padding-top: 100px;
+    animation: slideInFromBottom .85s ease-in;
+}
+.stats-heading{
+    max-width: 500px;
+    margin: auto;
+}
+.stats .grid h3{
+    font-size: 35px;
+}
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Stats ends here */
+
+
+/* Cli starts here */
+.cli .grid-3{
+    grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid-3 > *:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+.cli .grid-3 img{
+    height: 130px;
+}
+/* Cli ends here */
+
+
+/* Cloud starts here */
+.cloud{
+    height: 350px;
+}
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+.cloud .grid .text-center{
+    animation: slideInFromLeft .85s ease-in;
+}
+.cloud .grid img{
+    width: 200px;
+    justify-self: flex-end;
+    animation: slideInFromRight .85s ease-in;
+}
+/* Cloud ends here */
+
+
+/* Languages starts here */
+.languages .row{
+    flex-wrap: wrap;
+}
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    width: 120px;
+    cursor: pointer;
+    transition: transform .2s ease-in;
+}
+.languages .container{
+    justify-content: center;
+}
+.languages .card h4{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+/* Languages ends here */
+
+/* Features starts here */
+.features-head img,
+.docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+.features-sub-head img{
+    width: 300px;
+    justify-self: flex-end;
+}
+.features-main .card > i{
+    margin-right: 20px;
+}
+.features-main .grid{
+    padding: 30px;
+}
+.features-main .grid > *:first-child{
+    grid-column: 1 / span 3;
+}
+.features-main .grid > *:nth-child(2){
+    grid-column: 1 / span 2;
+}
+/* Features ends here */
+
+/* Docs starts here */
+.docs-main h3{
+    margin: 20px 0;
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    transition: all .2s ease-in;
+}
+.docs-main nav li:hover{
+    font-weight: bold;
+}
+pre,
+code{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+/* Docs ends here */
+
+/* Footer starts here */
+.footer .socials a{
+    margin: 0 10px;
+}
+/* Footer ends here */
+
+
+/* Media Query starts here */
+
+/* Tablets and under */
+@media only screen and (max-width: 1024px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .footer .grid,
+    .features-main .grid,
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase{
+        height: auto;
+    }
+    .showcase_text{
+        text-align: center;
+        margin-top: 40px;
+        animation: slideInFromTop .85s ease-in;
+    }
+    .showcase_form{
+        justify-self: center;
+        animation: slideInFromBottom .85s ease-in;
+    }
+    .stats{
+        animation: slideInFromLeft .85s ease-in;
+    }
+    .cli .grid-3 > *:first-child{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .cloud{
+        height: auto;
+    }
+    .cloud .grid .text-center{
+        animation: slideInFromTop .85s ease-in;
+    }
+    .cloud .grid img{
+        margin: 40px 0;
+        justify-self: center;
+        animation: slideInFromBottom .85s ease-in;
+    }
+    .features-head,
+    .features-sub-head,
+    .docs-head{
+        text-align: center;
+    }
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+        justify-self: center;
+    }
+    .features-main .grid *:first-child,
+    .features-main .grid *:nth-child(2){
+        grid-column: 1;
+    }
+}
+
+/* Mobiles and under */
+@media only screen and (max-width: 500px){
+    .navbar{
+        height: 110px;
+    }
+    .navbar .row{
+        flex-direction: column;
+    }
+   .nav_menu .row{
+       flex-direction: row;
+       background-color: rgba(0,0,0,.1);
+       padding: 8px;
+   }
+}
+
+@media only screen and (max-width: 480px){
+    .showcase_form{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .features-main .card i{
+        font-size: 1.5rem;
+    }
+    .footer .socials i{
+        font-size: 1.5rem;
+    }
+    .features-sub-head img{
+        width: 150px;
+    }
+    .features-head img,
+    .docs-head img{
+        width: 150px;
+    }
+    .card{
+        padding: 12px;
+        margin: 10px 0;
+    }
+    .container{
+        padding: 0 20px;
+    }
+}
+/* Media Query starts here */
